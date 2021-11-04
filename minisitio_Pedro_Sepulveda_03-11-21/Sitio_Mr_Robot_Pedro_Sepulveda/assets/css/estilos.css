@@ -1,0 +1,199 @@
+/*Menú de navegación*/
+header {
+    width: 100%;
+    background-color: darkgrey;
+    border: black solid 1px;
+}
+
+#btn-menu {
+    display: none;
+    /*oculta el tiquet*/
+}
+
+header label {
+    /*icono*/
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    padding-bottom: 35px;
+}
+
+header label :hover {
+    /*esto hace que el ícono cambie si el mouse pasa por encima*/
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logotipo_superior {
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 50px;
+    float: left;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.menu li:hover {
+    /*esto hace que los botones cambien si el mouse pasa por encima*/
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 40px;
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width:760px) {
+    /*Cuando tenga ese tamaño, pasa lo siguiente*/
+
+    header label {
+        display: block;
+    }
+
+    .logotipo_superior {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        position: absolute;
+        background: darkgrey;
+        width: 80%;
+        border: black solid 1px;
+        margin-left: -80%;
+        transition: all 0.3s;
+        /*<---- animación */
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked~.menu {
+        /*Cuando se active el check, buscará la clase .menu y hará lo siguiente*/
+        margin-left: 0;
+    }
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*TODOS*/
+
+div {
+    border: black solid 1px
+}
+
+p {
+    border: black solid 1px
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.texto_burbujas {
+    text-align: center;
+}
+
+.img_cuadrada {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: darkgrey;
+}
+
+.footed {
+    width: 100%;
+    height: 70px;
+    margin-top: 50px;
+    background-color: darkgrey;
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*Inicio*/
+
+.img_portada {
+    width: 100%;
+    height: 500px;
+    background-color: darkgray;
+}
+
+.burbujas_enlaces {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.circulos_para_img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: darkgrey;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+
+/*Personajes*/
+
+.circulos_personajes {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: darkgrey;
+}
+
+.contenedor_foto_personaje {
+    background-color: darkgrey;
+    margin-bottom: 50px;
+}
+
+.foto_personaje {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: darkgrey;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Temporadas*/
+
+.flecha {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Galería*/
+
+.miniaturas_galeria {
+    width: 100%;
+    height: 150px;
+    background-color: darkgrey;
+    margin-top: 10px;
+}
+
+/*-----------------------------------------------------------------------------*/
