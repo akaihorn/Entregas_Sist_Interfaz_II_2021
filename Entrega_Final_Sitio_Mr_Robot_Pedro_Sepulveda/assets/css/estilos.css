@@ -1,0 +1,315 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Share+Tech+Mono&display=swap');
+
+/*Menú de navegación*/
+
+header {
+    width: 100%;
+    background-color: #131313;
+}
+
+#btn-menu {
+    display: none;
+    /*oculta el tiquet*/
+}
+
+header label {
+    /*icono*/
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    padding-bottom: 35px;
+}
+
+header label :hover {
+    /*esto hace que el ícono cambie si el mouse pasa por encima*/
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logotipo_superior {
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 50px;
+    float: left;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.menu li:hover {
+    /*esto hace que los botones cambien si el mouse pasa por encima*/
+    cursor: pointer;
+    background-image: url("../img/glitch_1.gif");
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 40px;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:760px) {
+    /*Cuando tenga ese tamaño, pasa lo siguiente*/
+
+    header label {
+        display: block;
+    }
+
+    .logotipo_superior {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        z-index: 100;
+        position: absolute;
+        background-color: #131313;
+        width: 80%;
+        margin-left: -80%;
+        transition: all 0.3s;
+        /*<---- animación */
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked~.menu {
+        /*Cuando se active el check, buscará la clase .menu y hará lo siguiente*/
+        margin-left: 0;
+    }
+}
+
+/*------------------------------------------------------------------------------*/
+
+/*TODOS*/
+
+body {
+    height: 100%;
+    background-image: url("../img/img_fondo.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.fondo_pagina {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    min-height: 550px;
+    padding-bottom: 50px;
+}
+
+div {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    border-bottom: 1px white solid;
+}
+
+h2 {
+    margin-top: 40px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 38px;
+    color: white;
+    border-bottom: 1px white dashed;
+}
+
+.texto_burbujas {
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 25px;
+}
+
+/*-----------------------------EFECTO GLITCH HOVER----------------------------------------*/
+a:hover {
+    color: white;
+}
+
+/*Inicio*/
+.burbujas_enlaces:hover .img_circulos {
+    opacity: 50%;
+}
+
+.burbujas_enlaces:hover .circulos_para_img {
+    background-image: url("../img/glitch_1.gif");
+}
+
+/*Personajes*/
+.burbujas_enlaces:hover .circulos_personajes {
+    background-image: url("../img/glitch_1.gif");
+}
+
+/*Galería*/
+.contenedor_img_galeria:hover .miniatura_galeria {
+    opacity: 50%;
+}
+
+.contenedor_img_galeria:hover {
+    background-image: url("../img/glitch_1.gif");
+}
+
+/*Temporadas*/
+.burbujas_enlaces:hover .poster_temporada {
+    opacity: 50%;
+}
+
+.burbujas_enlaces:hover .contenedor_poster {
+    background-image: url("../img/glitch_1.gif");
+}
+
+/*---------------------------EFECTO GLITCH HOVER--------------------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+
+/*Inicio*/
+#contenedor_portada {
+    max-height: 550px;
+    overflow: hidden;
+}
+
+.img_portada {
+    width: 100%;
+}
+
+.texto_inicio {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.burbujas_enlaces {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    color: white;
+
+}
+
+.circulos_para_img {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img_circulos {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Personajes*/
+
+.circulos_personajes {
+    margin-right: auto;
+    margin-left: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor_foto_personaje {
+    background-color: #131313;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.foto_personaje {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Temporadas*/
+.contenedor_poster {
+    width: 200px;
+    height: 280px;
+    margin: auto;
+}
+
+.poster_temporada {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.trailer_ {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.trailer_ iframe,
+.trailer_ object,
+.trailer_ embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*Galería*/
+
+.contenedor_img_galeria {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.miniatura_galeria {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-width: 100%;
+    max-width: 200%;
+    min-height: 100%;
+    max-height: 200%;
+
+}
+
+/*-----------------------------------------------------------------------------*/
